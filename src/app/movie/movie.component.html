@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Recommendation System</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!--     <div style="margin-left: 30%">
+    	{{this.user.id}}<br>
+    	{{this.user.email}}<br>
+    	{{this.user.mobile_no}}
+    </div> -->
+    <nav class="navbar navbar-light bg-light">
+	  <span class="navbar-text">
+	    {{this.user.email}}
+	  </span>
+	</nav>
+	<br>
+	<div style="position:fixed; float: left; margin-left:65%; margin-top: 10%">
+		<h2 >Movies Rated={{this.totalRated}}</h2>
+		<button *ngIf="this.totalRated>=10" type="button" routerLink="/recommendations" class="btn btn-success">Recommend Movies</button>
+	</div>
+
+    <div class="table-responsive" style="width: 90%; margin-left:10%">
+	<div style="margin-left: 10%">
+    	<h3>Rate Atleast 10 Movies To Unlock The Recommendation Button</h3><br>
+    </div>
+	  <table class="table">
+	    <tr *ngFor="let movie of movies">
+	    	
+	   		<td>
+	   			<div class="card" style="width:100%">
+					<img src="{{this.movie.movieImage}}" style="" class="card-img-top">
+				</div>
+			</td>
+			<td>
+					<div class="card-body">
+					  	<h3>{{this.movie.title}}</h3>
+					    <p class="card-text">{{this.movie.about}}</p>
+					    <p class="card-text" *ngIf="this.movie.yearOfRelease!='1111-11-11'">{{this.movie.yearOfRelease}}</p>
+					    <p class="card-text" *ngIf="this.movie.yearOfRelease=='1111-11-11'">Release Date Not Available</p>
+					    <a href="{{this.movie.imdbId}}" target="_blank"> IMDB LINK</a>
+					</div>
+					
+					<div class="btn-toolbar mb-3" role="toolbar" style="margin: 10%" aria-label="Toolbar with button groups">
+
+						<div class="btn-group mr-2" role="group" aria-label="First group" *ngIf="!this.movie.rate">
+							<button type="button" (click)="Rate(this.movie.id,'1')" class="btn btn-secondary">1</button>
+						    <button type="button" (click)="Rate(this.movie.id,'2')" class="btn btn-secondary">2</button>
+						    <button type="button" (click)="Rate(this.movie.id,'3')" class="btn btn-secondary">3</button>
+						    <button type="button" (click)="Rate(this.movie.id,'4')" class="btn btn-secondary">4</button>
+						    <button type="button" (click)="Rate(this.movie.id,'5')" class="btn btn-secondary">5</button>
+
+						</div><br>
+						<b *ngIf="!this.movie.rate">Rate This Movie</b>
+						<b *ngIf="this.movie.rate">You Rated: {{this.movie.rate}}</b>
+					</div>
+			</td>
+			
+	    </tr>
+	  </table>
+	</div>
+
+
+
+
+  </body>
+</html>
+
+
