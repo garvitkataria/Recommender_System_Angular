@@ -1,11 +1,13 @@
-# RecommendationSystem
+# Recommendation System
 
 ## Backend Django Server
 https://github.com/garvitkataria/Recommender_System_Django
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+
 
 ## Setup
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 1. Install Dependencies though package.json
 
