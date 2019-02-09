@@ -41,3 +41,47 @@ You can check the movie recommendations by these 3 Algorithms.
 Click on finish button to go back to the welcome page.
 
 ![alt text](https://github.com/garvitkataria/Recommender_System_Django/blob/master/Demo_Images/step3.png)
+
+## Directory Structure (of src directory)
+
+├── app
+│   ├── app-routing.module.ts
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.spec.ts
+│   ├── app.component.ts
+│   ├── app.module.ts
+│   ├── customer-dashboard
+│   │   └── customer-dashboard.module.ts
+│   ├── data.service.spec.ts
+│   ├── data.service.ts
+│   ├── movie
+│   │   ├── movie.component.css
+│   │   ├── movie.component.html
+│   │   ├── movie.component.spec.ts
+│   │   └── movie.component.ts
+│   ├── recommendation
+│   │   ├── recommendation.component.css
+│   │   ├── recommendation.component.html
+│   │   ├── recommendation.component.spec.ts
+│   │   └── recommendation.component.ts
+│   └── welcome
+│       ├── welcome.component.css
+│       ├── welcome.component.html
+│       ├── welcome.component.spec.ts
+│       └── welcome.component.ts
+├── assets
+├── browserslist
+├── environments
+│   ├── environment.prod.ts
+│   └── environment.ts
+├── favicon.ico
+├── index.html
+├── karma.conf.js
+├── main.ts
+├── polyfills.ts
+├── styles.css
+├── test.ts
+├── tsconfig.app.json
+├── tsconfig.spec.json
+└── tslint.json
