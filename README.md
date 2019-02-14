@@ -18,10 +18,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
             ng serve --host 0.0.0.0 --port 8001
 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## MovieLens Dataset
 https://github.com/garvitkataria/Recommender_System_Django/tree/master/DataScraping/data
 
