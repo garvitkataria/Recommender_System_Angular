@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http' ;
   providedIn: 'root'
 })
 export class DataService {
-   server="http://35.200.250.64:8007/"
+   server="http://127.0.0.1:8007/"
   constructor(public http:HttpClient)
    {
    	console.log('DataService is running ...');
