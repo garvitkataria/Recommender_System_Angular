@@ -15,7 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 2. Run the server
 
-            ng serve
+            ng serve --host 0.0.0.0 --port 8001
 
 
 ## Development server
