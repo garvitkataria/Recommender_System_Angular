@@ -22,6 +22,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## MovieLens Dataset
+https://github.com/garvitkataria/Recommender_System_Django/tree/master/DataScraping/data
+
+This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.
+
+
+## Data Scraping
+
+https://github.com/garvitkataria/Recommender_System_Django/DataScraping/MovieDataScraping.ipynb
+
+Scrapped Movie Data from IMDB:
+https://github.com/garvitkataria/Recommender_System_Django/blob/master/DataScraping/ScrappedMovieData.json
+
+### Code for Algorithms used in the Recommendation System
+1. Item-item Collaborative Filtering 
+2. User-user Collaborative Filtering
+3. Matrix Factorization via Singular Value Decomposition (SVD)
+
+https://github.com/garvitkataria/Recommender_System_Django/blob/master/rating/views.py
+
 
 ## DEMO
 1. <h5>Step 1</h5>
